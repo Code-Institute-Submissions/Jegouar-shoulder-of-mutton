@@ -1,0 +1,275 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Public+Sans:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Default layout for portrait orientation */
+
+body {
+    position: absolute;
+    width: 100vw;
+    font-family: 'Bitter', serif;
+    color: rgb(35,55,55);
+    font-size: 3vw;
+}
+
+
+/* Navigation menu */
+
+nav {
+    background-image: url('images/BeerPumpHandles.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    width: 89vw;
+    height: 36vw;
+}
+
+#home, #beers, #rooms, #events {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    color: rgba(0,0,0,0);
+}
+
+#home {
+    background-image: url('images/UnselectedLogo.png');
+    width: 24vw;
+    height: 24vw;
+    top: 6vw;
+    left: 1vw;
+}
+
+#home.selected {
+    background-image: url('images/SelectedLogo.png');
+}
+
+#home:hover {
+    background-image: url('images/HoveredLogo.png');
+    width: 26vw;
+    height: 26vw;
+    left: 0vw;
+    top: 5vw;
+}
+
+#home:active {
+    background-image: url('images/ClickedLogo.png');
+    width: 22vw;
+    height: 22vw;
+    left: 2vw;
+    top: 7vw;
+}
+
+#beers, #rooms, #events {
+    width: 18vw;
+    height: 18vw;
+    top: 9vw;
+}
+
+#beers:hover, #rooms:hover, #events:hover {
+    width: 20vw;
+    height: 20vw;
+    top: 8vw;
+}
+
+#beers:active, #rooms:active, #events:active {
+    width: 16vw;
+    height: 16vw;
+    top: 10vw;
+}
+
+#beers {
+    background-image: url('images/UnselectedBeers.png');
+    left: 28vw;
+}
+
+#beers.selected {
+    background-image: url('images/SelectedBeers.png');
+}
+
+#beers:hover {
+    background-image: url('images/HoveredBeers.png');
+    left: 27vw;
+}
+
+#beers:active {
+    background-image: url('images/ClickedBeers.png');
+    left: 29vw;
+}
+
+#rooms {
+    background-image: url('images/UnselectedRooms.png');
+    left: 49vw;
+}
+
+#rooms.selected {
+    background-image: url('images/SelectedRooms.png');
+}
+
+#rooms:hover {
+    background-image: url('images/HoveredRooms.png');
+    left: 48vw;
+}
+
+#rooms:active {
+    background-image: url('images/ClickedRooms.png');
+    left: 50vw;
+}
+
+#events {
+    background-image: url('images/UnselectedEvents.png');
+    left: 70vw;
+}
+
+#events.selected {
+    background-image: url('images/SelectedEvents.png');
+}
+
+#events:hover {
+    background-image: url('images/HoveredEvents.png');
+    left: 69vw;
+}
+
+#events:active {
+    background-image: url('images/ClickedEvents.png');
+    left: 71vw;
+}
+
+
+
+/* Footer */
+
+footer {
+    width: 100vw;
+    height: 50vw;
+    top: 200vw;
+    position: absolute;
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+    text-align: center;
+    color: rgb(255,255,255);
+}
+
+footer section {
+    position: absolute;
+    bottom: 0vw;
+}
+
+footer p {
+    margin: 0vw;
+}
+
+footer ul {
+    margin: 2vw;
+}
+
+footer li {
+    display: inline;
+    margin: 10vw;
+}
+
+footer i {
+    font-size: 200%;
+    color: rgb(255,255,255);
+}
+
+footer a {
+    color: rgb(255,255,255);
+}
+
+/* Layout for landscape orientation */
+
+@media only screen and (orientation: landscape) {
+
+    body {
+    font-size: 2vw;
+    }
+
+    /* Navigation menu */
+
+    nav {
+        background-image: url('images/ClipPipe.png');
+        width: 18vw;
+        height: 63vw;
+    }
+
+    #home {
+        width: 16vw;
+        height: 16vw;
+        left: 1vw;
+        top: 1vw;
+    }
+
+    #home:hover {
+        width: 18vw;
+        height: 18vw;
+        left: 0vw;
+        top: 0vw;
+    }
+
+    #home:active {
+        width: 14vw;
+        height: 14vw;
+        left: 2vw;
+        top: 2vw;
+    }
+
+    #beers, #rooms, #events {
+        width: 12vw;
+        height: 12vw;
+        left: 3vw;
+    }
+
+    #beers:hover, #rooms:hover, #events:hover {
+        width: 14vw;
+        height: 14vw;
+        left: 2vw;
+    }
+
+    #beers:active, #rooms:active, #events:active {
+        width: 10vw;
+        height: 10vw;
+        left: 4vw;
+    }
+
+    #beers {
+        top: 20vw;
+    }
+
+    #beers:hover {
+        top: 19vw;
+    }
+
+    #beers:active {
+        top: 21vw;
+    }
+
+    #rooms {
+        top: 35vw;
+    }
+
+    #rooms:hover {
+        top: 34vw;
+    }
+
+    #rooms:active {
+        top: 36vw;
+    }
+
+    #events {
+        top: 50vw;
+    }
+
+    #events:hover {
+        top: 49vw;
+    }
+
+    #events:active {
+        top: 51vw;
+    }
+
+}
