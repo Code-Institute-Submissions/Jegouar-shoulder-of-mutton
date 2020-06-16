@@ -10,71 +10,136 @@
     <title>Welcome to The Shoulder of Mutton, Wantage</title>
 </head>
 
-<body id="welcome">
+<body>
 
     <header>
-        <nav>
-            <div title="Home">
-                <a href="index.html" id="home" class="selected">Home</a>
-            </div>
-            <div title="Beers">
-                <a href="beers.html" id="beers">Beers</a>
-            </div>
-            <div title="Rooms">
-                <a href="rooms.html" id="rooms">Rooms</a>
-            </div>
-            <div title="Events">
-                <a href="events.html" id="events">Events</a>
-            </div>
-        </nav>
+        <div id="exterior"></div>
+            <nav>
+                <div title="Home">
+                    <a href="index.html" id="home" class="selected">Home</a>
+                </div>
+                <div title="Beers">
+                    <a href="beers.html" id="beers">Beers</a>
+                </div>
+                <div title="Rooms">
+                    <a href="rooms.html" id="rooms">Rooms</a>
+                </div>
+                <div title="Events">
+                    <a href="events.html" id="events">Events</a>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section id="introduction">
-            <p>THE SHOULDER OF MUTTON is a <a href="https://camra.org.uk/" target="_blank" title="Campaign for Real Ale">CAMRA</a> award-winning corner pub, pleasantly perched in the centre of <a href="https://www.wantage.com/" target="_blank" title="Information about Wantage">Wantage</a> in Oxfordshire.</p>
-            <p>We sell <a href="beers.html" title="Beers">craft beer</a>, offer <a href="rooms.html" title="Rooms">accommodation</a> and host <a href="events.html" title="Events">social events</a>.</p>
+    <main id="welcome">
+        <section id="services">
+            <div>
+                <div class="left"></div>
+                <p><br><br><br><br><br><br><br>We sell <a href="beers.html" title="Beers">craft beer</a>, offer <a href="rooms.html" title="Rooms">accommodation</a> and host <a href="events.html" title="Events">social events</a>.</p>
+            </div>
         </section>
-        <section id="board">
-            <div id="boardback">
-                <div class="tab one">
-                    <p>Searching for a good atmosphere? You've found it.</p>
+        <section id="introduction">
+            <div>
+                <div class="right"></div>
+                <p><br><br>The Shoulder of Mutton is a <a href="https://camra.org.uk/" target="_blank" title="Campaign for Real Ale">CAMRA</a> award-winning corner pub, pleasantly perched in the centre of <a href="https://www.wantage.com/" target="_blank" title="Information about Wantage">Wantage</a> in Oxfordshire.</p>
+            </div>
+        </section>
+
+        <section class="wall">
+            <label for="zoomp" id="brick">Click this<br>brick!</label>
+            <input type="checkbox" id="zoomp" class="hidden">
+            <label for="zoom" id="alarm">Press the<br>alarm!</label>
+            <input type="checkbox" id="zoom" class="hidden">
+            <div class="reviews">
+                <div class="notebook Robin">
+                    <q>First time in here and I love it. Quirky pub with a strange bar that adds to the experience. Plenty of changing beers and games to play. Friendly staff. Great pub.</q>
+                    <p>Robin Wright, Google,<br>March 2020</p>
                 </div>
-                <div class="tab two">
-                    <p>Here at the pub, we're all about beer and people.</p>
+                <div class="postit Lesley">
+                    <q>Chilled atmosphere and lots of choice for beer lovers.</q>
+                    <p>Lesley Thompson, Facebook, 8th March 2020</p>
                 </div>
-                <div class="tab three">
-                    <p>Our speciality is creating the ideal place...</p>
+                <div class="postit Paul">
+                    <q>Great place. Very friendly and the choice of ales is amazing.</q>
+                    <p>Paul Asher, Facebook,<br>22nd February 2020</p>
                 </div>
-                <div class="tab four">
-                    <p>...for you to enjoy skillfully served real ales.</p>
+                <div class="notebook Mike">
+                    <q>Lots of lovely real beers. Nice quiet place where it's easy to chat and enjoy an evening out.</q>
+                    <p><br>Mike Short, Google, February 2020</p>
                 </div>
-                <div class="tab five">
-                    <p>A famously quirky three sided bar, an open fireplace...</p>
+                <div class="typed Linda">
+                    <q>Went for the open mic. It was quieter than usual, probably due to it being half term. It was a good night. Everyone was really friendly. There were some talented musicians and singers and they all really enjoyed playing to the audience. I felt really comfortable and would definitely go there again.</q>
+                    <p><br>Linda Hooper, Facebook,<br>19th February 2020</p>
                 </div>
-                <div class="tab six">
-                    <p>...and a comfy snug all help make it a welcoming place.</p>
+                <div class="postit Chris">
+                    <q>Top old school pub, love it.</q>
+                    <p><br>Chris Hull, Facebook,<br>24th January 2020</p>
                 </div>
-                <div class="tab seven">
-                    <p>Of course, the real feel is down to our customers.</p>
-                </div>
-                <div class="tab eight">
-                    <p>We are proud to be home to a whole host of characters...</p>
-                </div>
-                <div class="tab nine">
-                    <p>...artists, brewers, musicians, scientists and craftsmen.</p>
-                </div>
-                <div class="tab ten">
-                    <p>You're certain to find a great conversation.</p>
-                </div>
-                <div id="clear">
-                    <a href="#blank">Clear</a>
-                </div>
-                <div id="reload">
-                    <a href="index.html">Reload</a>
+                <div class="notebook Alex">
+                    <q>Nice little local pub with a good rotating range of ales.</q>
+                    <p><br>Alex Ashman, Google, February 2020</p>
                 </div>
             </div>
         </section>
+
+        <section id="board">
+            <div id="boardback">
+                <div>
+                    <label for="loadone" id="first">Load the first tab onto the board</label>
+                    <input type="checkbox" id="loadone" class="hidden">
+                    <div class="tab one"></div>
+                </div>
+                <div>
+                    <label for="loadtwo" id="second">Load the second tab onto the board</label>
+                    <input type="checkbox" id="loadtwo" class="hidden">
+                    <div class="tab two"></div>
+                </div>
+                <div>
+                    <label for="loadthree" id="third">Load the third tab onto the board</label>
+                    <input type="checkbox" id="loadthree" class="hidden">
+                    <div class="tab three"></div>
+                </div>
+                <div>
+                    <label for="loadfour" id="fourth">Load the fourth tab onto the board</label>
+                    <input type="checkbox" id="loadfour" class="hidden">
+                    <div class="tab four"></div>
+                </div>
+                <div>
+                    <label for="loadfive" id="fifth">Load the fifth tab onto the board</label>
+                    <input type="checkbox" id="loadfive" class="hidden">
+                    <div class="tab five"></div>
+                </div>
+                <div>
+                    <label for="loadsix" id="sixth">Load the sixth tab onto the board</label>
+                    <input type="checkbox" id="loadsix" class="hidden">
+                    <div class="tab six"></div>
+                </div>
+                <div>
+                    <label for="loadseven" id="seventh">Load the seventh tab onto the board</label>
+                    <input type="checkbox" id="loadseven" class="hidden">
+                    <div class="tab seven"></div>
+                </div>
+                <div>
+                    <label for="loadeight" id="eighth">Load the eighth tab onto the board</label>
+                    <input type="checkbox" id="loadeight" class="hidden">
+                    <div class="tab eight"></div>
+                </div>
+                <div>
+                    <label for="loadnine" id="ninth">Load the ninth tab onto the board</label>
+                    <input type="checkbox" id="loadnine" class="hidden">
+                    <div class="tab nine"></div>
+                </div>
+                <div>
+                    <label for="loadten" id="tenth">Load the tenth tab onto the board</label>
+                    <input type="checkbox" id="loadten" class="hidden">
+                    <div class="tab ten"></div>
+                </div>
+            </div>
+            <div id="frame"></div>
+        </section>
     </main>
+
+
 
     <footer>
         <section>

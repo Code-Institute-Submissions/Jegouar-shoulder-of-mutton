@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Public+Sans:wght@700&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Bangers&family=Bitter:ital@0;1&family=Cedarville+Cursive&family=Eater&family=Homemade+Apple&family=Just+Another+Hand&family=La+Belle+Aurore&family=Lacquer&family=Nothing+You+Could+Do&family=Patrick+Hand+SC&family=Permanent+Marker&family=Rock+Salt&family=Sedgwick+Ave&family=Sedgwick+Ave+Display&family=Special+Elite&family=Trade+Winds&family=Walter+Turncoat&display=swap');
 
 * {
     margin: 0;
@@ -6,14 +6,18 @@
     border: 0;
 }
 
+
 /* Default layout for portrait orientation */
 
 body {
+    perspective-origin: 70vw 261vw;
+    perspective: 83vw;
     position: absolute;
     width: 100vw;
+    height: 462.5vw;
     font-family: 'Bitter', serif;
     color: rgb(35,55,55);
-    font-size: 3vw;
+    overflow-x: hidden;
 }
 
 
@@ -24,8 +28,8 @@ nav {
     background-repeat: no-repeat;
     background-size: 100%;
     position: absolute;
-    width: 89vw;
-    height: 36vw;
+    width: 100vw;
+    height: 37.5vw;
 }
 
 #home, #beers, #rooms, #events {
@@ -42,7 +46,7 @@ nav {
     width: 24vw;
     height: 24vw;
     top: 6vw;
-    left: 1vw;
+    left: 6vw;
 }
 
 #home.selected {
@@ -51,18 +55,18 @@ nav {
 
 #home:hover {
     background-image: url('images/HoveredLogo.png');
-    width: 26vw;
-    height: 26vw;
-    left: 0vw;
-    top: 5vw;
+    width: 25vw;
+    height: 25vw;
+    left: 5.5vw;
+    top: 5.5vw;
 }
 
 #home:active {
     background-image: url('images/ClickedLogo.png');
-    width: 22vw;
-    height: 22vw;
-    left: 2vw;
-    top: 7vw;
+    width: 23vw;
+    height: 23vw;
+    left: 6.5vw;
+    top: 6.5vw;
 }
 
 #beers, #rooms, #events {
@@ -72,20 +76,20 @@ nav {
 }
 
 #beers:hover, #rooms:hover, #events:hover {
-    width: 20vw;
-    height: 20vw;
-    top: 8vw;
+    width: 19vw;
+    height: 19vw;
+    top: 8.5vw;
 }
 
 #beers:active, #rooms:active, #events:active {
-    width: 16vw;
-    height: 16vw;
-    top: 10vw;
+    width: 17vw;
+    height: 17vw;
+    top: 9.5vw;
 }
 
 #beers {
     background-image: url('images/UnselectedBeers.png');
-    left: 28vw;
+    left: 33vw;
 }
 
 #beers.selected {
@@ -94,17 +98,17 @@ nav {
 
 #beers:hover {
     background-image: url('images/HoveredBeers.png');
-    left: 27vw;
+    left: 32.5vw;
 }
 
 #beers:active {
     background-image: url('images/ClickedBeers.png');
-    left: 29vw;
+    left: 33.5vw;
 }
 
 #rooms {
     background-image: url('images/UnselectedRooms.png');
-    left: 49vw;
+    left: 54vw;
 }
 
 #rooms.selected {
@@ -113,17 +117,17 @@ nav {
 
 #rooms:hover {
     background-image: url('images/HoveredRooms.png');
-    left: 48vw;
+    left: 53.5vw;
 }
 
 #rooms:active {
     background-image: url('images/ClickedRooms.png');
-    left: 50vw;
+    left: 54.5vw;
 }
 
 #events {
     background-image: url('images/UnselectedEvents.png');
-    left: 70vw;
+    left: 75vw;
 }
 
 #events.selected {
@@ -132,31 +136,34 @@ nav {
 
 #events:hover {
     background-image: url('images/HoveredEvents.png');
-    left: 69vw;
+    left: 74.5vw;
 }
 
 #events:active {
     background-image: url('images/ClickedEvents.png');
-    left: 71vw;
+    left: 75.5vw;
 }
-
 
 
 /* Footer */
 
 footer {
     width: 100vw;
-    height: 50vw;
-    top: 200vw;
+    height: 30vw;
+    top: 432.5vw;
     position: absolute;
-    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+    background-image: linear-gradient(rgba(35,55,55,0), rgba(35,55,55,0.6), rgba(35,55,55,0.8), rgba(35,55,55,1));
     text-align: center;
-    color: rgb(255,255,255);
+    font-size: 2.5vw;
+    color: rgb(185,155,100);
+
 }
 
 footer section {
     position: absolute;
     bottom: 0vw;
+    padding: 5vw;
+    box-sizing: border-box;
 }
 
 footer p {
@@ -174,90 +181,664 @@ footer li {
 
 footer i {
     font-size: 200%;
-    color: rgb(255,255,255);
+    color: rgb(185,155,100);
 }
 
 footer a {
-    color: rgb(255,255,255);
+    color: rgb(185,155,100);
 }
+
+
+/* Home page header image */
+
+#exterior {
+    background-image: url('images/ExteriorPortrait.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    width: 100vw;
+    height: 112.5vw;
+    left: 0vw;
+    top: 0vw;
+    animation-name: exterior;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes exterior {
+    from {
+        background-size: 150%
+    }
+    to {
+        background-size: 100%;
+    }
+}
+
+/* Home page main */
+
+#welcome {
+    background-image: url('images/WoodenBase.jpg'), url('images/BoardPortrait.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    width: 100vw;
+    height: 351.5vw;
+    left: 0vw;
+    top: 112.5vw;
+}
+
+#services {
+    text-align: left;
+    color: rgb(235,220,205);
+    position: absolute;
+    width: 38vw;
+    height: 57vw;
+    left: 5vw;
+    top: 6.5vw;
+    font-size: 2.5vw;
+}
+
+#services a {
+    color: rgb(235,220,205);
+}
+
+.left {
+    width: 38vw;
+    height: 57vw;
+    shape-outside: polygon(0vw 0vw, 38vw 0vw, 38vw 57vw, 0vw 57vw, 37vw 35vw, 37vw 31vw, 0vw 6vw);
+    float: right;
+}
+
+#introduction {
+    text-align: left;
+    color: rgb(35,55,55);
+    position: absolute;
+    width: 52vw;
+    height: 59vw;
+    left: 43vw;
+    top: 6.5vw;
+    font-size: 2.5vw;
+}
+
+#introduction a {
+    color: rgb(35,55,55);
+}
+
+.right {
+    width: 52vw;
+    height: 59vw;
+    shape-outside: polygon(0vw 0vw, 1vw 0vw, 1vw 2vw, 38vw 32vw, 38vw 35vw, 33vw 36vw, 50vw 58vw, 52vw 58vw, 52vw 59vw, 0vw 59vw);
+    float: left;
+}
+
+/* Reviews */
+
+.wall {
+    position: absolute;
+    width: 30vw;
+    left: 20vw;
+    top: 230vw;
+    transform-style: preserve-3d;
+    transform: rotateX(7deg) rotateY(-20deg);
+}
+
+.reviews {
+    transform: translate(0,0) scale(2);
+    position: absolute;
+    width: 30vw;
+    left: 0vw;
+    top: 0vw;
+}
+
+.reviews q {
+    display: block;
+}
+
+.reviews p {
+    text-align: right;
+}
+
+#zoomp:checked ~ .reviews {
+    animation-name: zoominp;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+@keyframes zoominp {
+    from {
+        transform: translate(0,0) scale(2);
+    }
+    to {
+        transform: translate(40vw,100vw) scale(6);
+    }
+}
+
+#brick {
+    position: absolute;
+    width: 21vw;
+    height: 7vw;
+    left: 29vw;
+    top: -43vw;
+    font-size: 3vw;
+    line-height: 3.5vw;
+    text-align: center;
+    color: rgb(100,100,100);
+}
+
+.postit {
+    background-color: rgb(250,235,140);
+    width: 4vw;
+    height: 4vw;
+    padding: 0.5vw;
+    box-shadow: 0.1vw 0.1vw 0.2vw rgb(70,85,70);
+}
+
+.notebook {
+    background-image: url('images/Notebook.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 4vw;
+    height: 8vw;
+    padding: 0.5vw;
+    box-shadow: 0.1vw 0.1vw 0.2vw rgb(70,85,70);
+}
+
+.typed {
+    background-image: url('images/FoldedPaper.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 6vw;
+    height: 9vw;
+    padding: 0.75vw;
+    box-shadow: 0.1vw 0.1vw 0.2vw rgb(70,85,70);
+}
+
+.Lesley {
+    font-family: 'Homemade Apple', cursive;
+    transform: rotate(5deg) translate(0vw,-4vw);
+}
+
+.Lesley q {
+    font-size: 0.35vw;
+}
+
+.Lesley p {
+    font-size: 0.25vw;
+}
+
+.Robin {
+    font-family: 'Nothing You Could Do', cursive;
+    padding-top: 0.9vw;
+    transform: rotate(-10deg);
+}
+
+.Robin q {
+    font-size: 0.4vw;
+    line-height: 0.46vw;
+}
+
+.Robin p {
+    font-size: 0.3vw;
+}
+
+.Paul {
+    font-family: 'Just Another Hand', cursive;
+    transform: rotate(15deg) translate(9vw,-16vw);
+}
+
+.Paul q {
+    font-size: 0.7vw;
+}
+
+.Paul p {
+    font-size: 0.6vw;
+}
+
+.Linda {
+    font-family: 'Special Elite', cursive;
+    transform: rotate(-5deg) translate(8vw,-28vw);
+}
+
+.Linda q {
+    font-size: 0.4vw;
+}
+
+.Linda p {
+    font-size: 0.3vw;
+    line-height: 0.4vw;
+}
+
+.Mike {
+    font-family: 'Sedgwick Ave', cursive;
+    transform: rotate(15deg) translate(-2vw,-10vw);
+    padding-top: 1vw;
+}
+
+.Mike q {
+    font-size: 0.35vw;
+    line-height: 0.46vw;
+}
+
+.Mike p {
+    font-size: 0.25vw;
+}
+
+.Alex {
+    font-family: 'Cedarville Cursive', cursive;
+    transform: rotate(5deg) translate(9vw,-39vw);
+    padding-top: 1vw;
+}
+
+.Alex q {
+    font-size: 0.4vw;
+    line-height: 0.46vw;
+}
+
+.Alex p {
+    font-size: 0.3vw;
+    line-height: 0.4vw;
+}
+
+.Chris {
+    font-family: 'La Belle Aurore', cursive;
+    transform: rotate(-15deg) translate(15vw,-29vw);
+}
+
+.Chris q {
+    font-size: 0.85vw;
+    line-height: 0.85vw;
+}
+
+.Chris p {
+    font-size: 0.45vw;
+    line-height: 0.6vw;
+}
+
+/* Board */
+
+#frame {
+    background-image: url('images/BoardFramePortrait.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    width: 62.5vw;
+    height: 110vw;
+    top: 80vw;
+    left: 0vw;
+}
+
+#board {
+    font-size: 1.5vw;
+}
+
+#boardback {
+    position: absolute;
+    top: 91.5vw;
+    left: 0.5vw;
+    width: 59vw;
+    height: 79vw;
+    transform-style: preserve-3d;
+    transform: rotateX(7deg) rotateY(-20deg);
+}
+
+.tab::after {
+    content: "< < < < < < . . ";
+    position: absolute;
+    width: 59vw;
+    height: 6vw;
+    border-radius: 0vw 1vw 1vw 0vw;
+    background-image: url('images/Tab.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    box-shadow: -0.1vw -0.1vw rgb(255,255,255), 0.1vw 0.1vw rgb(35,55,55);
+    line-height: 6vw;
+    text-align: right;
+}
+
+#loadone:checked ~ .one::after, #loadtwo:checked ~ .two::after, #loadthree:checked ~ .three::after, #loadfour:checked ~ .four::after, #loadfive:checked ~ .five::after, #loadsix:checked ~ .six::after, #loadseven:checked ~ .seven::after, #loadeight:checked ~ .eight::after, #loadnine:checked ~ .nine::after, #loadten:checked ~ .ten::after {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+.one::after, #first {
+    left: 31vw;
+    top: 0vw;
+    font-family: 'Amatic SC', cursive;
+    font-size: 3vw;
+}
+
+#loadone:checked ~ .one::after {
+    animation-name: firsttab;
+}
+
+@keyframes firsttab {
+    from {
+        content: "< < < < < < . . ";
+        left: 31vw;
+        text-align: right;
+    }
+    to {
+        content: "Searching for a good atmosphere? You've found it.";
+        left: 0vw;
+        text-align: center;
+    }
+}
+
+.two::after, #second {
+    left: 36vw;
+    top: 8vw;
+    font-family: 'Bangers', cursive;
+    font-size: 2.75vw;
+}
+
+#loadtwo:checked ~ .two::after {
+    animation-name: secondtab;
+}
+
+@keyframes secondtab {
+    from {
+        content: "< < < < < < . . ";
+        left: 36vw;
+        text-align: right;
+    }
+    to {
+        content: "Here at the pub, we're all about beer and people.";
+        left: 0vw;
+        text-align: center;
+    }
+}
+
+.three::after, #third {
+    left: 26vw;
+    top: 16vw;
+    font-family: 'Eater', cursive;
+    font-size: 1.75vw;
+}
+
+#loadthree:checked ~ .three::after {
+    animation-name: thirdtab;
+}
+
+@keyframes thirdtab {
+    from {
+        content: "< < < < < < . . ";
+        left: 26vw;
+        text-align: right;
+    }
+    to {
+        content: "Our speciality is creating the ideal place...";
+        left: 0vw;
+        text-align: center;
+    }
+}
+
+.four::after, #fourth {
+    left: 33vw;
+    top: 24vw;
+    font-family: 'Lacquer', cursive;
+    font-size: 2vw;
+}
+
+#loadfour:checked ~ .four::after {
+    animation-name: fourthtab;
+}
+
+@keyframes fourthtab {
+    from {
+        content: "< < < < < < . . ";
+        left: 33vw;
+        text-align: right;
+    }
+    to {
+        content: "...for you to enjoy skillfully served real ales.";
+        left: 0vw;
+        text-align: center;
+    }
+}
+
+.five::after, #fifth {
+    left: 23vw;
+    top: 32.25vw;
+    font-family: 'Patrick Hand SC', cursive;
+    font-size: 2.5vw;
+}
+
+#loadfive:checked ~ .five::after {
+    animation-name: fifthtab;
+}
+
+@keyframes fifthtab {
+    from {
+        content: "< < < < < < . . ";
+        left: 23vw;
+        text-align: right;
+    }
+    to {
+        content: "A famously quirky three sided bar, an open fireplace...";
+        left: 0vw;
+        text-align: center;
+    }
+}
+
+.six::after, #sixth {
+    left: 29vw;
+    top: 40.25vw;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.75vw;
+}
+
+#loadsix:checked ~ .six::after {
+    animation-name: sixthtab;
+}
+
+@keyframes sixthtab {
+    from {
+        content: "< < < < < < . . ";
+        left: 29vw;
+        text-align: right;
+    }
+    to {
+        content: "...and a comfy snug all help make it a welcoming place.";
+        left: 0vw;
+        text-align: center;
+    }
+}
+
+.seven::after, #seventh {
+    left: 24vw;
+    top: 48.5vw;
+    font-family: 'Rock Salt', cursive;
+    font-size: 1.5vw;
+}
+
+#loadseven:checked ~ .seven::after {
+    animation-name: seventhtab;
+}
+
+@keyframes seventhtab {
+    from {
+        content: "< < < < < < . . ";
+        left: 24vw;
+        text-align: right;
+    }
+    to {
+        content: "Of course, the real feel is down to our customers.";
+        left: 0vw;
+        text-align: center;
+    }
+}
+
+.eight::after, #eighth {
+    left: 34vw;
+    top: 56.75vw;
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 2vw;
+}
+
+#loadeight:checked ~ .eight::after {
+    animation-name: eighthtab;
+}
+
+@keyframes eighthtab {
+    from {
+        content: "< < < < < < . . ";
+        left: 34vw;
+        text-align: right;
+    }
+    to {
+        content: "We are proud to be home to a whole host of characters...";
+        left: 0vw;
+        text-align: center;
+    }
+}
+
+.nine::after, #ninth {
+    left: 27vw;
+    top: 64.75vw;
+    font-family: 'Trade Winds', cursive;
+    font-size: 1.75vw;
+}
+
+#loadnine:checked ~ .nine::after {
+    animation-name: ninthtab;
+}
+
+@keyframes ninthtab {
+    from {
+        content: "< < < < < < . . ";
+        left: 27vw;
+        text-align: right;
+    }
+    to {
+        content: "...artists, brewers, musicians, scientists and craftsmen.";
+        left: 0vw;
+        text-align: center;
+    }
+}
+
+.ten::after, #tenth {
+    left: 32vw;
+    top: 73vw;
+    font-family: 'Walter Turncoat', cursive;
+    font-size: 2.25vw;
+}
+
+#loadten:checked ~ .ten::after {
+    animation-name: tenthtab;
+}
+
+@keyframes tenthtab {
+    from {
+        content: "< < < < < < . . ";
+        left: 32vw;
+        text-align: right;
+    }
+    to {
+        content: "You're certain to find a great conversation.";
+        left: 0vw;
+        text-align: center;
+    }
+}
+
+label {
+    position: absolute;
+    width: 59vw;
+    height: 6vw;
+    z-index: 1;
+    color: rgb(0,0,0,0);
+    line-height: 6vw;
+    text-align: right;
+}
+
+.hidden {
+    position: absolute;
+    left: -100vw;
+}
+
+
+
 
 /* Layout for landscape orientation */
 
 @media only screen and (orientation: landscape) {
 
     body {
-    font-size: 2vw;
+        height: 265vw;
+        perspective-origin: 64vw 164vw;
+        perspective: 56vw;
     }
 
     /* Navigation menu */
 
     nav {
-        background-image: url('images/ClipPipe.png');
-        width: 18vw;
-        height: 63vw;
+        background-image: url('images/WoodenPole.jpg');
+        width: 3vw;
+        height: 56vw;
+        left: 10.5vw;
+        top: 0vw;
     }
 
     #home {
         width: 16vw;
         height: 16vw;
-        left: 1vw;
-        top: 1vw;
+        left: -6.5vw;
+        top: 4vw;
     }
 
     #home:hover {
-        width: 18vw;
-        height: 18vw;
-        left: 0vw;
-        top: 0vw;
+        width: 17vw;
+        height: 17vw;
+        left: -7vw;
+        top: 3.5vw;
     }
 
     #home:active {
-        width: 14vw;
-        height: 14vw;
-        left: 2vw;
-        top: 2vw;
+        width: 15vw;
+        height: 15vw;
+        left: -6vw;
+        top: 4.5vw;
     }
 
     #beers, #rooms, #events {
         width: 12vw;
         height: 12vw;
-        left: 3vw;
+        left: -4.5vw;
     }
 
     #beers:hover, #rooms:hover, #events:hover {
-        width: 14vw;
-        height: 14vw;
-        left: 2vw;
+        width: 13vw;
+        height: 13vw;
+        left: -5vw;
     }
 
     #beers:active, #rooms:active, #events:active {
-        width: 10vw;
-        height: 10vw;
-        left: 4vw;
+        width: 11vw;
+        height: 11vw;
+        left: -4vw;
     }
 
     #beers {
-        top: 20vw;
+        top: 22vw;
     }
 
     #beers:hover {
-        top: 19vw;
+        top: 21.5vw;
     }
 
     #beers:active {
-        top: 21vw;
+        top: 22.5vw;
     }
 
     #rooms {
-        top: 35vw;
+        top: 36vw;
     }
 
     #rooms:hover {
-        top: 34vw;
+        top: 35.5vw;
     }
 
     #rooms:active {
-        top: 36vw;
+        top: 36.5vw;
     }
 
     #events {
@@ -265,11 +846,205 @@ footer a {
     }
 
     #events:hover {
-        top: 49vw;
+        top: 49.5vw;
     }
 
     #events:active {
-        top: 51vw;
+        top: 50.5vw;
+    }
+
+    /* Footer */
+
+    footer {
+        top: 235vw;
+    }
+
+    /* Home page header image */
+
+    #exterior {
+        background-image: url('images/ExteriorLandscape.jpg');
+        height: 65vw;
+    }
+
+    /* Home page main */
+
+    #welcome {
+        background-image: url('images/WoodenBase.jpg'), url('images/BoardLandscape.jpg');
+        height: 201.5vw;
+        top: 65vw;
+    }
+
+    #services {
+        width: 40vw;
+        height: 44vw;
+        font-size: 2.5vw;
+    }
+
+    .left {
+        width: 40vw;
+        height: 44vw;
+        shape-outside: polygon(10vw 0vw, 40vw 0vw, 40vw 44vw, 0vw 44vw, 39vw 20vw);
+    }
+
+    #introduction {
+        width: 50vw;
+        height: 45vw;
+        left: 45vw;
+        font-size: 2.5vw;
+    }
+
+    .right {
+        width: 50vw;
+        height: 45vw;
+        shape-outside: polygon(0vw 0vw, 3vw 0vw, 26vw 19vw, 26vw 22vw, 23vw 23vw, 38vw 40vw, 39vw 44vw, 50vw 45vw, 0vw 45vw);
+    }
+
+    .wall {
+        width: 16vw;
+        left: 84vw;
+        top: 61vw;
+    }
+
+    .reviews {
+        transform: translate(0,0) scale(1);
+        width: 8vw;
+    }
+
+    #zoom:checked ~ .reviews {
+        animation-name: zoomin;
+        animation-duration: 2s;
+        animation-fill-mode: both;
+    }
+
+    @keyframes zoomin {
+        from {
+            transform: translate(0,0) scale(1);
+        }
+        to {
+            transform: translate(-10vw,25vw) scale(3);
+        }
+    }
+
+    #alarm {
+        position: absolute;
+        width: 11vw;
+        height: 4vw;
+        left: -1vw;
+        top: 41vw;
+        font-size: 1.6vw;
+        line-height: 2.2vw;
+        text-align: left;
+        color: rgb(205,0,30);
+        z-index: 0;
+    }
+
+    .Lesley {
+        transform: rotate(5deg) translate(2vw,-4vw);
+    }
+
+    .Robin {
+        padding-top: 0.85vw;
+        transform: rotate(-10deg);
+    }
+
+    .Paul {
+        transform: rotate(0deg) translate(0vw,-5vw);
+    }
+
+    .Linda {
+        transform: rotate(-5deg) translate(0.5vw,-10vw);
+    }
+
+    .Mike {
+        padding-top: 0.85vw;
+        transform: rotate(15deg) translate(0vw,-5vw);
+    }
+
+    .Alex {
+        padding-top: 0.86vw;
+        transform: rotate(15deg) translate(-2vw,-13vw);
+    }
+
+    .Chris {
+        transform: rotate(10deg) translate(-2.5vw,-13vw);
+    }
+
+    /* Board */
+
+    #frame {
+        background-image: url('images/BoardFrameLandscape.png');
+        width: 60vw;
+        height: 100vw;
+        top: 50vw;
+    }
+
+    #boardback {
+        top: 61vw;
+        left: 16vw;
+        width: 40vw;
+        height: 53vw;
+    }
+
+    .tab::after {
+        width: 40vw;
+        height: 4.25vw;
+        line-height: 4vw;
+    }
+
+    .one::after, #first {
+        top: 0vw;
+        font-size: 2.25vw;
+    }
+
+    .two::after, #second {
+        top: 5.25vw;
+        font-size: 1.75vw;
+    }
+
+    .three::after, #third {
+        top: 10.5vw;
+        font-size: 1.25vw;
+    }
+
+    .four::after, #fourth {
+        top: 15.75vw;
+        font-size: 1.5vw;
+    }
+
+    .five::after, #fifth {
+        top: 21.25vw;
+        font-size: 1.75vw;
+    }
+
+    .six::after, #sixth {
+        top: 26.75vw;
+        font-size: 1.25vw;
+    }
+
+    .seven::after, #seventh {
+        top: 32.25vw;
+        font-size: 1vw;
+    }
+
+    .eight::after, #eighth {
+        top: 37.75vw;
+        font-size: 1.5vw;
+    }
+
+    .nine::after, #ninth {
+        top: 43.25vw;
+        font-size: 1.25vw;
+    }
+
+    .ten::after, #tenth {
+        top: 48.75vw;
+        font-size: 1.5vw;
+    }
+
+    label {
+        width: 40vw;
+        height: 4.25vw;
+        line-height: 4.25vw;
     }
 
 }
