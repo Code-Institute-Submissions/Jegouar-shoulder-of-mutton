@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Homemade+Apple&family=Just+Another+Hand&family=La+Belle+Aurore&family=Nothing+You+Could+Do&family=Sedgwick+Ave&family=Special+Elite&display=swap');
+
+#wall {
+    -webkit-perspective-origin: 50vw -81.5vw;
+    perspective-origin: 50vw -81.5vw;
+    -webkit-perspective: 83vw;
+    perspective: 83vw;
+    position: absolute;
+    width: 30vw;
+    left: 20vw;
+    top: 230vw;
+}
+
+@media only screen and (orientation: landscape) {
+    #wall {
+        -webkit-perspective-origin: -20vw 38vw;
+        perspective-origin: -20vw 38vw;
+        -webkit-perspective: 56vw;
+        perspective: 56vw;
+        width: 16vw;
+        left: 84vw;
+        top: 61vw;
+    }
+}
+
+#comments {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: rotateX(7deg) rotateY(-20deg);
+    transform: rotateX(7deg) rotateY(-20deg);
+}
+
+#reviews {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: translate(0,0) scale(2);
+    -ms-transform: translate(0,0) scale(2);
+    transform: translate(0,0) scale(2);
+    position: absolute;
+    width: 30vw;
+    left: 0vw;
+    top: 0vw;
+}
+
+@media only screen and (orientation: landscape) {
+    #reviews {
+        -webkit-transform: translate(0,0) scale(1);
+        -ms-transform: translate(0,0) scale(1);
+        transform: translate(0,0) scale(1);
+        width: 8vw;
+    }
+}
+
+#reviews q {
+    display: block;
+}
+
+#reviews p {
+    text-align: right;
+}
+
+#zoomp:checked ~ #reviews {
+    -webkit-animation: zoominp 2s both;
+    animation: zoominp 2s both;
+}
+
+@-webkit-keyframes zoominp {
+    from {
+        -webkit-transform: translate(0,0) scale(2);
+        transform: translate(0,0) scale(2);
+    }
+    to {
+        -webkit-transform: rotateX(-7deg) rotateY(20deg) translate(45vw,90vw) scale(5);
+        transform: rotateX(-7deg) rotateY(20deg) translate(45vw,90vw) scale(5);
+    }
+}
+
+@keyframes zoominp {
+    from {
+        -webkit-transform: translate(0,0) scale(2);
+        transform: translate(0,0) scale(2);
+    }
+    to {
+        -webkit-transform: rotateX(-7deg) rotateY(20deg) translate(45vw,90vw) scale(5);
+        transform: rotateX(-7deg) rotateY(20deg) translate(45vw,90vw) scale(5);
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    #zooml:checked ~ #reviews {
+        -webkit-animation: zoominl 2s both;
+        animation: zoominl 2s both;
+    }
+
+    @-webkit-keyframes zoominl {
+        from {
+            -webkit-transform: translate(0,0) scale(1);
+            transform: translate(0,0) scale(1);
+        }
+        to {
+            -webkit-transform: translate(-10vw,25vw) scale(3);
+            transform: translate(-10vw,25vw) scale(3);
+        }
+    }
+
+    @keyframes zoominl {
+        from {
+            -webkit-transform: translate(0,0) scale(1);
+            transform: translate(0,0) scale(1);
+        }
+        to {
+            -webkit-transform: translate(-10vw,25vw) scale(3);
+            transform: translate(-10vw,25vw) scale(3);
+        }
+    }
+}
+
+#brick {
+    position: absolute;
+    width: 21vw;
+    height: 7vw;
+    left: 29vw;
+    top: -43vw;
+    font-size: 3vw;
+    line-height: 3.5vw;
+    text-align: center;
+    color: rgb(100,100,100);
+}
+
+@media only screen and (orientation: landscape) {
+    #alarm {
+        position: absolute;
+        width: 11vw;
+        height: 4vw;
+        left: -1vw;
+        top: 41vw;
+        font-size: 1.6vw;
+        line-height: 2.2vw;
+        text-align: left;
+        color: rgb(205,0,30);
+        z-index: 0;
+    }
+}
+
+.postit, .notebook, .typed {
+    -webkit-box-shadow: 0.1vw 0.1vw 0.2vw rgb(70,85,70);
+    box-shadow: 0.1vw 0.1vw 0.2vw rgb(70,85,70);
+}
+
+.postit {
+    background-color: rgb(250,235,140);
+    width: 4vw;
+    height: 4vw;
+    padding: 0.5vw;
+}
+
+.notebook {
+    background-image: url('images/Notebook.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 4vw;
+    height: 8vw;
+    padding: 0.5vw;
+}
+
+.typed {
+    background-image: url('images/FoldedPaper.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 6vw;
+    height: 9vw;
+    padding: 0.75vw;
+}
+
+.Lesley {
+    font-family: 'Just Another Hand', 'Segoe Script', 'Apple Casual Regular', cursive;
+    -webkit-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    transform: rotate(5deg);
+}
+
+@media only screen and (orientation: landscape) {
+    .Lesley {
+        -webkit-transform: rotate(5deg) translate(2vw,-1vw);
+        -ms-transform: rotate(5deg) translate(2vw,-1vw);
+        transform: rotate(5deg) translate(2vw,-1vw);
+    }
+}
+
+.Lesley q {
+    font-size: 0.7vw;
+}
+
+.Lesley p {
+    font-size: 0.6vw;
+}
+
+.Robin {
+    font-family: 'Nothing You Could Do', 'Lucida Handwriting', 'Textile', cursive;
+    padding-top: 0.9vw;
+    -webkit-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+}
+
+@media only screen and (orientation: landscape) {
+    .Robin {
+        padding-top: 0.85vw;
+        -webkit-transform: rotate(-10deg) translate(0vw,-1vw);
+        -ms-transform: rotate(-10deg) translate(0vw,-1vw);
+        transform: rotate(-10deg) translate(0vw,-1vw);
+    }
+}
+
+.Robin q {
+    font-size: 0.4vw;
+    line-height: 0.46vw;
+}
+
+.Robin p {
+    font-size: 0.3vw;
+}
+
+.Paul {
+    font-family: 'Homemade Apple', 'Lucida Calligraphy', 'Zapf Chancery', cursive;
+    -webkit-transform: rotate(15deg) translate(9vw,-16vw);
+    -ms-transform: rotate(15deg) translate(9vw,-16vw);
+    transform: rotate(15deg) translate(9vw,-16vw);
+}
+
+@media only screen and (orientation: landscape) {
+    .Paul {
+        -webkit-transform: rotate(0deg) translate(1vw,-5vw);
+        -ms-transform: rotate(0deg) translate(1vw,-5vw);
+        transform: rotate(0deg) translate(1vw,-5vw);
+    }
+}
+
+.Paul q {
+    font-size: 0.35vw;
+}
+
+.Paul p {
+    font-size: 0.25vw;
+}
+
+.Linda {
+    font-family: 'Special Elite', 'Courier New', 'American Typewriter', cursive;
+    -webkit-transform: rotate(-5deg) translate(8vw,-28vw);
+    -ms-transform: rotate(-5deg) translate(8vw,-28vw);
+    transform: rotate(-5deg) translate(8vw,-28vw);
+}
+
+@media only screen and (orientation: landscape) {
+    .Linda {
+        -webkit-transform: rotate(-5deg) translate(0.5vw,-10vw);
+        -ms-transform: rotate(-5deg) translate(0.5vw,-10vw);
+        transform: rotate(-5deg) translate(0.5vw,-10vw);
+    }
+}
+
+.Linda q {
+    font-size: 0.4vw;
+}
+
+.Linda p {
+    font-size: 0.3vw;
+    line-height: 0.4vw;
+}
+
+.Mike {
+    font-family: 'Sedgwick Ave', 'Segoe Print', 'Comic Sans', cursive;
+    padding-top: 1vw;
+    -webkit-transform: rotate(15deg) translate(-2vw,-8vw);
+    -ms-transform: rotate(15deg) translate(-2vw,-8vw);
+    transform: rotate(15deg) translate(-2vw,-8vw);
+}
+
+@media only screen and (orientation: landscape) {
+    .Mike {
+        padding-top: 0.85vw;
+        -webkit-transform: rotate(15deg) translate(0vw,-5vw);
+        -ms-transform: rotate(15deg) translate(0vw,-5vw);
+        transform: rotate(15deg) translate(0vw,-5vw);
+    }
+}
+
+.Mike q {
+    font-size: 0.35vw;
+    line-height: 0.46vw;
+}
+
+.Mike p {
+    font-size: 0.25vw;
+}
+
+.Alex {
+    font-family: 'Cedarville Cursive', 'Lucida Handwriting', 'Brush Script', cursive;
+    padding-top: 1vw;
+    -webkit-transform: rotate(5deg) translate(9vw,-39vw);
+    -ms-transform: rotate(5deg) translate(9vw,-39vw);
+    transform: rotate(5deg) translate(9vw,-39vw);
+}
+
+@media only screen and (orientation: landscape) {
+    .Alex {
+        padding-top: 0.86vw;
+        -webkit-transform: rotate(15deg) translate(-2vw,-13vw);
+        -ms-transform: rotate(15deg) translate(-2vw,-13vw);
+        transform: rotate(15deg) translate(-2vw,-13vw);
+    }
+}
+
+.Alex q {
+    font-size: 0.4vw;
+    line-height: 0.46vw;
+}
+
+.Alex p {
+    font-size: 0.3vw;
+    line-height: 0.4vw;
+}
+
+.Chris {
+    font-family: 'La Belle Aurore', 'Freestyle Script', 'Marker Felt', cursive;
+    -webkit-transform: rotate(-15deg) translate(15vw,-29vw);
+    -ms-transform: rotate(-15deg) translate(15vw,-29vw);
+    transform: rotate(-15deg) translate(15vw,-29vw);
+}
+
+@media only screen and (orientation: landscape) {
+    .Chris {
+        -webkit-transform: rotate(10deg) translate(-2.5vw,-13vw);
+        -ms-transform: rotate(10deg) translate(-2.5vw,-13vw);
+        transform: rotate(10deg) translate(-2.5vw,-13vw);
+    }
+}
+
+.Chris q {
+    font-size: 0.85vw;
+    line-height: 0.85vw;
+}
+
+.Chris p {
+    font-size: 0.45vw;
+    line-height: 0.6vw;
+}
