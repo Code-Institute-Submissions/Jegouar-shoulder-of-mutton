@@ -1,4 +1,4 @@
-﻿/* Default font for standard text */
+/* Default font for standard text */
 
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital@0;1&display=swap');
 
@@ -49,7 +49,6 @@ nav {
 #home, #beers, #rooms, #events {
     background-repeat: no-repeat;
     background-size: 100%;
-    -webkit-border-radius: 50%;
     border-radius: 50%;
     position: absolute;
     text-align: center;
@@ -290,7 +289,6 @@ footer section {
     position: absolute;
     bottom: 0vw;
     padding: 5vw 10vw;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
