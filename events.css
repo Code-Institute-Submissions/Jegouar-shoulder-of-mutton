@@ -1,0 +1,444 @@
+/* Default layout is for portrait orientation */
+
+
+body {
+    background-image: url('images/FloorTilesPortrait.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 300vw;
+}
+
+@media only screen and (orientation: landscape) {
+    body {
+        background-image: url('images/FloorTilesLandscape.jpg');
+        height: 200vw;
+    }
+}
+
+#visit {
+    position: absolute;
+    left: 10vw;
+    top: 50vw;
+    width: 80vw;
+}
+
+@media only screen and (orientation: landscape) {
+    #visit {
+        left: 30vw;
+        top: 10vw;
+        width: 60vw;
+    }
+}
+
+.chair {
+    position: absolute;
+    width: 28vw;
+    height: 21vw;
+}
+
+.first {
+    left: 20vw;
+    top: 75vw;
+}
+
+@media only screen and (orientation: landscape) {
+    .first {
+        left: 40vw;
+        top: 60vw;
+    }
+}
+
+.second {
+    left: 65vw;
+    top: 70vw;
+    transform: rotate(-10deg);
+}
+
+@media only screen and (orientation: landscape) {
+    .second {
+        left: 60vw;
+        top: 60vw;
+    }
+}
+
+.third {
+    left: 5vw;
+    top: 110vw;
+    transform: rotate(-90deg);
+}
+
+@media only screen and (orientation: landscape) {
+    .third {
+        left: 15vw;
+        top: 65vw;
+    }
+}
+
+.fourth {
+    left: 60vw;
+    top: 135vw;
+    transform: rotate(150deg);
+}
+
+@media only screen and (orientation: landscape) {
+    .fourth {
+        top: 80vw;
+    }
+}
+
+#openmic {
+    background-image: url('images/TableTop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 20vw;
+    top: 85vw;
+    width: 80vw;
+    height: 60vw;
+    transform: rotate(-5deg);
+    box-sizing: border-box;
+    padding: 7.5vw;
+}
+
+@media only screen and (orientation: landscape) {
+    #openmic {
+        left: 30vw;
+        top: 25vw;
+        padding: 8vw;
+    }
+}
+
+#openmic > p {
+        width: 50vw;
+        padding-top: 0.5vw;
+    }
+
+@media only screen and (orientation: landscape) {
+    #openmic > p {
+        padding-top: 2vw;
+    }
+}
+
+.landscape, .portrait, #microphone, #clicka, #clickd, #clickr, #clickj, #clicke {
+    position: absolute;
+    font-size: 6.5vw;
+    line-height: 6.5vw;
+}
+
+.landscape, #clicka, #clickr, #clicke {
+    width: 9.5vw;
+    height: 6.5vw;
+}
+
+.portrait, #clickd, #clickj {
+    width: 6.5vw;
+    height: 9.5vw;
+}
+
+#clicka, #clickd, #clickr, #clickj, #clicke {
+    text-align: center;
+    color: rgba(0,0,0,0);
+}
+
+.aldavidguygraham, #clicka {
+    left: 10vw;
+    top: 30vw;
+    transform: rotate(-5deg);
+}
+
+#zooma:checked ~ .aldavidguygraham {
+    animation: zoomina 8s none;
+}
+
+@keyframes zoomina {
+    0% {
+        transform: rotate(-5deg) scale(1);
+    }
+    25% {
+        transform: rotate(-5deg) translate(10vw,-30vw) scale(8);
+        z-index: 2;
+    }
+    75% {
+        transform: rotate(-5deg) translate(10vw,-30vw) scale(8);
+        z-index: 2;
+    }
+    100% {
+        transform: rotate(-5deg) scale(1);
+    }
+}
+
+.duncan, #clickd {
+    left: 30vw;
+    top: 35vw;
+    transform: rotate(15deg);
+}
+
+#zoomd:checked ~ .duncan {
+    animation: zoomind 8s none;
+}
+
+@keyframes zoomind {
+    0% {
+        transform: rotate(15deg) scale(1);
+    }
+    25% {
+        transform: rotate(15deg) translate(10vw,-30vw) scale(8);
+        z-index: 2;
+    }
+    75% {
+        transform: rotate(15deg) translate(10vw,-30vw) scale(8);
+        z-index: 2;
+    }
+    100% {
+        transform: rotate(15deg) scale(1);
+    }
+}
+
+.robby, #clickr {
+    left: 15vw;
+    top: 40vw;
+    transform: rotate(-20deg);
+}
+
+#zoomr:checked ~ .robby {
+    animation: zoominr 8s none;
+}
+
+@keyframes zoominr {
+    0% {
+        transform: rotate(-20deg) scale(1);
+    }
+    25% {
+        transform: rotate(-20deg) translate(10vw,-40vw) scale(8);
+        z-index: 2;
+    }
+    75% {
+        transform: rotate(-20deg) translate(10vw,-40vw) scale(8);
+        z-index: 2;
+    }
+    100% {
+        transform: rotate(-20deg) scale(1);
+    }
+}
+
+.jeaninekaren, #clickj {
+    left: 5vw;
+    top: 40vw;
+    transform: rotate(10deg);
+}
+
+#zoomj:checked ~ .jeaninekaren {
+    animation: zoominj 8s none;
+}
+
+@keyframes zoominj {
+    0% {
+        transform: rotate(10deg) scale(1);
+    }
+    25% {
+        transform: rotate(10deg) translate(10vw,-50vw) scale(8);
+        z-index: 2;
+    }
+    75% {
+        transform: rotate(10deg) translate(10vw,-50vw) scale(8);
+        z-index: 2;
+    }
+    100% {
+        transform: rotate(10deg) scale(1);
+    }
+}
+
+.eddietimdavidalex, #clicke {
+    left: 20vw;
+    top: 50vw;
+    transform: rotate(5deg);
+}
+
+#zoome:checked ~ .eddietimdavidalex {
+    animation: zoomine 8s none;
+}
+
+@keyframes zoomine {
+    0% {
+        transform: rotate(5deg) scale(1);
+    }
+    25% {
+        transform: rotate(5deg) translate(10vw,-50vw) scale(8);
+        z-index: 2;
+    }
+    75% {
+        transform: rotate(5deg) translate(10vw,-50vw) scale(8);
+        z-index: 2;
+    }
+    100% {
+        transform: rotate(5deg) scale(1);
+    }
+}
+
+#microphone {
+    left: 35vw;
+    top: 50vw;
+    width: 13vw;
+    height: 4vw;
+    transform: rotate(25deg);
+}
+
+.fifth {
+    left: 5vw;
+    top: 175vw;
+    transform: rotate(-15deg);
+}
+
+@media only screen and (orientation: landscape) {
+    .fifth {
+        top: 105vw;
+    }
+}
+
+.sixth {
+    left: 45vw;
+    top: 175vw;
+    transform: rotate(5deg);
+}
+
+@media only screen and (orientation: landscape) {
+    .sixth {
+        left: 40vw;
+        top: 105vw;
+    }
+}
+
+.seventh {
+    left: 10vw;
+    top: 240vw;
+    transform: rotate(-175deg);
+}
+
+@media only screen and (orientation: landscape) {
+    .seventh {
+        left: 65vw;
+        top: 150vw;
+        transform: rotate(95deg);
+    }
+}
+
+.eighth {
+    left: 45vw;
+    top: 245vw;
+    transform: rotate(170deg);
+}
+
+@media only screen and (orientation: landscape) {
+    .eighth {
+        left: 35vw;
+        top: 170vw;
+    }
+}
+
+#quiz {
+    background-image: url('images/TableTop.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    left: -10vw;
+    top: 190vw;
+    width: 80vw;
+    height: 60vw;
+    transform: rotate(-5deg);
+    box-sizing: border-box;
+    padding: 7.5vw 7.5vw 7.5vw 20vw;
+}
+
+@media only screen and (orientation: landscape) {
+    #quiz {
+        top: 120vw;
+    }
+}
+
+#quiz > p {
+        width: 50vw;
+        padding-top: 0.5vw;
+    }
+
+@media only screen and (orientation: landscape) {
+    #quiz > p {
+        width: 50vw;
+        padding-top: 2vw;
+    }
+}
+
+.book, #paper, #pencil {
+    position: absolute;
+}
+
+.book {
+    width: 9.9vw;
+    height: 15vw;
+    box-shadow: 0.5vw 1vw 0.5vw;
+}
+
+.collins {
+    left: 15vw;
+    top: 25vw;
+    transform: rotate(-5deg);
+}
+
+.general {
+    left: 25vw;
+    top: 30vw;
+    transform: rotate(15deg);
+}
+
+.ultimate {
+    left: 20vw;
+    top: 35vw;
+    transform: rotate(10deg);
+}
+
+#paper {
+    background-image: url('images/FoldedPaper.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 50vw;
+    top: 30vw;
+    width: 16vw;
+    height: 24vw;
+    transform: rotate(-5deg);
+}
+
+#paper p {
+    font-family: 'Sedgwick Ave', 'Segoe Print', 'Comic Sans', cursive;
+    font-size: 1.5vw;
+    padding: 2vw 2vw 1vw 2vw;
+}
+
+#pencil {
+    left: 55vw;
+    top: 40vw;
+    width: 15vw;
+    height: 1vw;
+    transform: rotate(45deg);
+}
+
+
+/* Hidden checkbox position */
+
+.hidden {
+    position: absolute;
+    left: -100vw;
+}
+
+
+
+/* Footer position */
+
+footer {
+    top: 288.75vw;
+}
+
+@media only screen and (orientation: landscape) {
+    footer {
+        top: 196.25vw;
+    }
+}
